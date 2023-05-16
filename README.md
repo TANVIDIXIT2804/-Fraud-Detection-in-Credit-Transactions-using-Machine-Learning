@@ -2,8 +2,10 @@
 
 Objective:
 In this project, we aim to classify a given credit transaction as fraudulent or valid based on various factors, including the time of the transaction. We have trained our model using logistic regression, simple classifying modes and neural network models. The dataset used for now is a credit transaction history of a bank which has time, amount and fraud status as known columns. The other columns' names are hidden for privacy reasons; Thus, these values are assumed to be scaled. We then test the learnt model on the test set and calculate the accuracies for the same.
+
 Implementation:
  This can be classified into 4 parts broadly:
+ 
 Data Analysis- 
 To gain an understanding of our data, we need to conduct an initial analysis. However, due to privacy reasons, we only have information on the transaction amount, while the other columns, labelled V1 to V28, have been scaled and are unknown.
 Our analysis shows that:
