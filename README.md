@@ -20,7 +20,7 @@ The original dataset is heavily skewed towards non-fraud transactions, indicatin
 
 2. Data preprocessing-
 	
-	Scaling and sample making:
+   Scaling and sample making:
 In this kernel phase, we will scale the Time and Amount columns and create a sub-sample of the data frame with equal amounts of fraud and non-fraud cases. This will help the algorithms better understand fraud patterns in transactions.
 Here, our subsample data frame will have an equal amount of fraud and non-fraud transactions, creating a 50/50 ratio.
 
@@ -29,10 +29,10 @@ Here, our subsample data frame will have an equal amount of fraud and non-fraud 
 -This can also result in wrong correlations between features and the outcome.
 -It's important to have a balanced dataset to understand the true correlations and train the model to detect fraud accurately.
 
-        Splitting the dataset:
+   Splitting the dataset:
 Before applying the Random UnderSampling technique, we need to separate the original data frame. This is because we want to test our models on the original testing set, not the testing set created by either undersampling or oversampling techniques. The aim is to fit the model with the undersampled or oversampled data frames to detect patterns and test it on the original testing set.
 	
-	Summary:
+   Summary:
 -We have two scaled columns: scaled amount and scaled time.
 -To create a new sub-sample with equal fraud and non-fraud cases, we randomly select 492 cases of non-fraud.
 -We combine the 492 cases of fraud with the 492 cases of non-fraud to create a new sub-sample.
