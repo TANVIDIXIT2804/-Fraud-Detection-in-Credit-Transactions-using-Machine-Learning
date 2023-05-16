@@ -29,7 +29,7 @@ Here, our subsample data frame will have an equal amount of fraud and non-fraud 
 -This can also result in wrong correlations between features and the outcome.
 -It's important to have a balanced dataset to understand the true correlations and train the model to detect fraud accurately.
 
-	Splitting the dataset:
+        Splitting the dataset:
 Before applying the Random UnderSampling technique, we need to separate the original data frame. This is because we want to test our models on the original testing set, not the testing set created by either undersampling or oversampling techniques. The aim is to fit the model with the undersampled or oversampled data frames to detect patterns and test it on the original testing set.
 	
 	Summary:
@@ -52,12 +52,15 @@ Synthetic Minority Over-sampling Technique (SMOTE) (over-sampling) creates new s
 Due to time constraints, we couldnt test for over-sampling but the results as found for undersampling case are as followed:
 
 Training accuracy:
+
 ![image](https://github.com/TANVIDIXIT2804/Credit-card-fraud-detection--ML-based/assets/76091761/b7db6e27-6120-45f2-ac8b-20170eeb1bd7)
 
 Training accuracy with cross validation:
+
 ![image](https://github.com/TANVIDIXIT2804/Credit-card-fraud-detection--ML-based/assets/76091761/41d1a644-cd1b-44dc-9449-82187b2cad83)
 
 Roc-auc score:
+
 ![image](https://github.com/TANVIDIXIT2804/Credit-card-fraud-detection--ML-based/assets/76091761/55f6149e-5b4d-464f-a4cf-5b4d2c7d58f4)
 
 5. Conclusion:
@@ -68,12 +71,15 @@ During our analysis of undersampling, we made a mistake due to which overfitting
 Thus, here we will have to use SMOTE technique as it is applied "during" the cross-validation process and not "before" it. This means that synthetic data is only generated for the training set and does not affect the validation set.
 Reason:
 
-     ![image](https://github.com/TANVIDIXIT2804/Credit-card-fraud-detection--ML-based/assets/76091761/63ca212a-9f11-47fd-a538-726ead5f8cfb)
+ Undersampling cv:
 
-                  Undersampling cv 
+ ![image](https://github.com/TANVIDIXIT2804/Credit-card-fraud-detection--ML-based/assets/76091761/63ca212a-9f11-47fd-a538-726ead5f8cfb)
+
+
+SMOTE cv:
 		   
-		  ![image](https://github.com/TANVIDIXIT2804/Credit-card-fraud-detection--ML-based/assets/76091761/5819f6c2-0617-4263-b69a-6d729a339774)
-		  SMOTE cv
+![image](https://github.com/TANVIDIXIT2804/Credit-card-fraud-detection--ML-based/assets/76091761/5819f6c2-0617-4263-b69a-6d729a339774)
+		  
 
 Applications:
 ~Financial institutions, such as banks and credit card companies, use fraud detection models to identify fraudulent transactions and prevent financial losses.
