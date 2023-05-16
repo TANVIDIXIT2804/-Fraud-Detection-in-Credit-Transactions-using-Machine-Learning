@@ -10,9 +10,13 @@ Implementation:
 To gain an understanding of our data, we need to conduct an initial analysis. However, due to privacy reasons, we only have information on the transaction amount, while the other columns, labelled V1 to V28, have been scaled and are unknown.
 Our analysis shows that:
 -The average transaction amount is around USD 88, indicating that most of the transactions are relatively small.
+
 -We don't have any null values that need to be replaced.
+
 -The dataset is heavily imbalanced, with fraud transactions accounting for only 0.17% of the total transactions. Thus, we must use appropriate techniques to address this imbalance in our dataset.
+
 -Furthermore, the data description informs us that all features, except time and amount, have undergone a PCA transformation, which is a dimensionality reduction technique.
+
 -The scaled V features are assumed to have been previously scaled for the PCA transformation.
    
    Why does an imbalanced dataset cause a problem?
@@ -26,7 +30,9 @@ Here, our subsample data frame will have an equal amount of fraud and non-fraud 
 
    Why do we need to do this?
 -Using the original imbalanced data frame can cause overfitting, as models will assume that frauds are rare. 
+
 -This can also result in wrong correlations between features and the outcome.
+
 -It's important to have a balanced dataset to understand the true correlations and train the model to detect fraud accurately.
 
    Splitting the dataset:
@@ -34,8 +40,11 @@ Before applying the Random UnderSampling technique, we need to separate the orig
 	
    Summary:
 -We have two scaled columns: scaled amount and scaled time.
+
 -To create a new sub-sample with equal fraud and non-fraud cases, we randomly select 492 cases of non-fraud.
+
 -We combine the 492 cases of fraud with the 492 cases of non-fraud to create a new sub-sample.
+
 -We created a new data frame as we need the model to be tested on imbalanced cases. The balanced samples created would be fitted in the model using undersampling or oversampling to detect patterns and predict accordingly.
 
 3. Performing Random UnderSampling and OverSampling:
@@ -43,8 +52,11 @@ In this project phase, we will use "Random Under Sampling" to balance our highly
 
 We then performed various data analysis and preprocessing techniques on the new dataset:
 -Correlation Matrices:
+
 -Interquartile Range Method:
+
 -Understanding t-SNE:
+
 We then conducted classifier (underSampling) testing by training five types of classifiers and choosing the best.
 Synthetic Minority Over-sampling Technique (SMOTE) (over-sampling) creates new synthetic points to have an equal balance of the classes. 
 
@@ -83,7 +95,11 @@ SMOTE cv:
 
 Applications:
 ~Financial institutions, such as banks and credit card companies, use fraud detection models to identify fraudulent transactions and prevent financial losses.
+
 ~E-commerce companies use fraud detection models to identify and prevent fraudulent transactions on their platforms.
+
 ~Insurance companies use fraud detection models to identify fraudulent claims and prevent insurance fraud.
+
 ~Healthcare providers use fraud detection models to identify fraudulent medical claims and prevent healthcare fraud.
+
 ~Government agencies use fraud detection models to identify fraudulent tax returns and prevent tax fraud.
